@@ -18,6 +18,59 @@
 
       <div class="txt">
         <h2><strong>About</strong></h2>
+         <p>
+    This site is a lightweight HTML utility built at the University of Pennsylvania to support
+    expert quality control of arterial spin labeling (ASL) MRI cerebral blood flow (CBF) maps.
+    The core goal is to collect consistent, high-quality human ratings that can be used to train
+    automated quality assessment methods—helping ASL data become more reliable for large clinical
+    research studies and, ultimately, improving downstream diagnosis and monitoring workflows.
+  </p>
+
+  <p>
+    ASL is a non-invasive MRI technique used to quantify CBF, but ASL-derived maps can be affected
+    by artifacts such as motion, low signal-to-noise, inappropriate post-labeling delay, smoothing,
+    and other acquisition/processing issues. Because manual quality checks are time-consuming and
+    subjective, this project focuses on making expert review faster and more standardized—while
+    generating labeled data for machine learning models that can scale quality control across
+    multisite datasets. :contentReference[oaicite:0]{index=0}
+  </p>
+
+  <h3>How rating works</h3>
+  <ul>
+    <li>
+      Reviewers can scroll through all slices in a selected view (axial, coronal, or sagittal),
+      switch views, and adjust the display range (default: <code>-20</code> to <code>80</code>
+      ml/100g/min).
+    </li>
+    <li>
+      Ratings are enabled after the reviewer has inspected all views at least once, encouraging
+      consistent review before scoring.
+    </li>
+    <li>
+      Each image receives a 1–4 quality score:
+      <ul>
+        <li><strong>4 — Excellent:</strong> High-resolution, clear anatomy, no visible artifacts.</li>
+        <li><strong>3 — Average:</strong> Typical expected quality; minimal artifacts or smooth but artifact-free.</li>
+        <li><strong>2 — Poor:</strong> Noticeable artifacts, but potentially usable in analysis.</li>
+        <li><strong>1 — Unacceptable:</strong> Severe artifacts; should be excluded from studies.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Why it matters</h3>
+  <p>
+    The collected ratings provide supervised targets for training automated quality evaluation
+    models (including approaches that predict an overall quality index and/or likely artifact
+    sources). Scalable QC helps protect statistical power in large studies, reduces manual burden,
+    and supports more rigorous, reproducible neuroimaging pipelines. :contentReference[oaicite:1]{index=1}
+  </p>
+
+  <p class="about-note">
+    <em>
+      Note: This tool is designed for research quality assessment and model development, and is
+      not a clinical diagnostic device.
+    </em>
+  </p>
       </div>
     </div>
   </body>
